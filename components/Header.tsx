@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   const getMonthDates = useMemo(() => {
-    const daysInMonth = getDaysInMonth(month, year);
+    const daysInMonth = getDaysInMonth(day, month, year);
     const dates = [];
 
     for (let i = 1; i <= daysInMonth; i++) {
