@@ -4,7 +4,7 @@ import React, { useMemo } from "react";
 
 const Header = () => {
   const { selectedDate, setSelectedDate } = useTodoStore();
-  const [month, year] = selectedDate.split("/").map(Number);
+  const [day, month, year] = selectedDate.split("/").map(Number);
 
   const months = [
     "January",
@@ -21,7 +21,8 @@ const Header = () => {
     "December",
   ];
 
-  const getDaysInMonth = (month: number, year: number) => {
+  const getDaysInMonth = (day: number, month: number, year: number) => {
+    console.log(day, month, year);
     return new Date(year, month, 0).getDate();
   };
 
